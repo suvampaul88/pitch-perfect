@@ -37,7 +37,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.enabled = false
         print("in recordAudio")
         
-        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
         let currentDateTime = NSDate()
         let formatter = NSDateFormatter()
@@ -60,6 +60,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
     }
     
+    
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if (flag) {
             recordedAudio = RecordedAudio(filePathUrl: recorder.url, title: "recorder.url.lastPathComponent")
@@ -70,6 +71,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
             stopButton.hidden = true
         }
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "stopRecording"){

@@ -151,6 +151,12 @@
                             <constraint firstItem="7dj-IG-IsF" firstAttribute="top" secondItem="Na4-Ac-zss" secondAttribute="bottom" constant="8" symbolic="YES" id="z68-UL-sek"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playSoundChip" destination="NAy-nT-Rps" id="8Gm-ts-bfe"/>
+                        <outlet property="playSoundDarth" destination="2tH-Wc-UNG" id="GZk-fD-PEy"/>
+                        <outlet property="playSoundFast" destination="xIB-PW-hRp" id="CoZ-mS-xwM"/>
+                        <outlet property="playSoundSlow" destination="7dj-IG-IsF" id="fTl-rb-9NA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Fz-l0-I8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
